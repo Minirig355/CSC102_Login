@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="config/css/login.css">
+        <script src="config/js/logincode.js"></script>
+        <title>UAT space program - login</title>
+    </head>
+    <body>
+        <img src="config/content/Logo.jpg" alt="UAT Space Program Logo" width="256" height="256">
+        <form name="loginForm" action="config/transition.html" onsubmit="return validateLogin()" method="post" autocomplete="off"> <!--Using a form that goes to a loading page in order to validate user input. I chose to send the data via POST and turn off autocomplete to help protect some data. This sets off a JS function to assist in validation -->
+            <div class="container">
+                <h1>UAT Space Program Login</h1>
+                <p>please enter your name and badge number to continue.</p>
+                <hr>
+
+                <input type="text" id="fullName" name="fullName" readonly> <!--A readonly input field to display the First/Last name formatted correctly-->
+                <hr>
+                
+                <label for="firstName"><b>first name:</b></label>
+                <input type="text" id="firstName" name="firstName" onchange="updateName()" required><br><br> <!--I included the onchange tag to enable the readonly input form without having to submit. I also included the required tag as it's less code than implementing the same function in JS-->
+
+                <label for="lastName"><b>last name:</b></label>
+                <input type="text" id="lastName" name="lastName" onchange="updateName()" required><br><br>
+
+                <label for="badgeNum"><b>badge number:</b></label>
+                <input type="password" pattern="[0-9]*" inputmode="numeric" id="badgeNum" name="badgeNum" required><br><br> <!--For this one I used type pass as I assume it's a bit more sensitive. The pattern and inputmode tags are used so that only numbers are accepted as input, also cutting down on JS required for data validation-->
+
+                <button type="submit" class="submitbtn">submit</button>
+            </div>
+        </form>
+    </body>
+</html>

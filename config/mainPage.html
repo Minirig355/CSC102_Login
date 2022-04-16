@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/styling.css">
+        <script src="js/code.js"></script>
+        <title>UAT Space Program</title>
+    </head>
+    <body>
+        <div id="clock">Time</div>
+        <img src="content/Logo.jpg" alt="UAT Space Program Logo" width="256" height="256">
+        
+        <h1>UAT Space Program</h1>
+
+        <h2>mission 3</h2>
+
+        <p>Flight recorder telemetry is displayed in blue.</p>
+        <br>
+        <br>
+        <div class="telemetry" id="blastOffText">Blastoff Countdown</div>
+        <img id="blastOffPic" src="content/blastOffPic.gif" style="height:128px;display:none;"/>
+        <button onclick="blastOffTimer();">
+            Start
+        </button>
+        <br>
+        <br>
+        <br>
+        <h2>Craps simulator!</h2>
+        <div id="crapsRes">Craps Results</div>
+        <div id="die1Res">First die results</div>
+        <div id="die2Res">Second die results</div>
+        <div id="sumRes">Sum of die</div>
+        <button id="gambleButton" onclick="playCraps();">Play</button>
+        
+        <br>
+        <br>
+        Number of wins: <div id="wins">0</div>
+        Number of losses: <div id="losses">0</div>
+        Number of ties: <div id="ties">0</div>
+        <br>
+        <br>
+        <button id="gambleeButton" onclick="clockLoop();">Play</button>
+    </body>
+</html>
